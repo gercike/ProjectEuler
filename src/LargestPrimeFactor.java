@@ -20,8 +20,8 @@ public class LargestPrimeFactor {
     }
 
     static boolean isThisNumberPrime(double number) {
-        for (int i = 2; i <= Math.ceil(number / 2); i++) {
-            if (number % i == 0) {
+        for (int i = (int) Math.ceil(Math.sqrt(number)); i > 1; i--) {
+            if (number % i == 0 && i != number) {
                 return false;
             }
         }
