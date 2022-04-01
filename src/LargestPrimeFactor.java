@@ -1,3 +1,6 @@
+import java.time.Duration;
+import java.time.Instant;
+
 public class LargestPrimeFactor {
     public static void main(String[] args) {
         System.out.println(getTheLargestPrimeFactorOf(600851475143L));
@@ -20,7 +23,7 @@ public class LargestPrimeFactor {
     }
 
     static boolean isThisNumberPrime(double number) {
-        for (int i = (int) Math.ceil(Math.sqrt(number)); i > 1; i--) {
+        for (int i = 2; i <= (int) Math.ceil(Math.sqrt(number)); i++) {
             if (number % i == 0 && i != number) {
                 return false;
             }
