@@ -23,6 +23,9 @@ public class LargestPrimeFactor {
     }
 
     static boolean isThisNumberPrime(double number) {
+        if (number == 1) {
+            return false;
+        }
         for (int i = 2; i <= (int) Math.ceil(Math.sqrt(number)); i++) {
             if (number % i == 0 && i != number) {
                 return false;
